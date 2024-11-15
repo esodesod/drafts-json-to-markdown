@@ -11,8 +11,8 @@ foreach ($entry in $jsonContent)
 {
 	# Extract relevant fields from the entry
 	$uuid = $entry.uuid
-	$created_at = $(Get-Date ($entry.created_at).ToLocalTime() -Format yyyy-MM-ddTHH:mm:ss)
-	$modified_at = $(Get-Date ($entry.modified_at).ToLocalTime() -Format yyyy-MM-ddTHH:mm:ss)
+	$created_at = $(Get-Date ($entry.created_at).ToLocalTime() -Format yyyy-MM-ddTHH:mm:sszzz)
+	$modified_at = $(Get-Date ($entry.modified_at).ToLocalTime() -Format yyyy-MM-ddTHH:mm:sszzz)
 	$content = $entry.content
 	$created_longitude = $entry.created_longitude
 	$created_latitude = $entry.created_latitude
